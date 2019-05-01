@@ -1,6 +1,7 @@
 const {
   convertRgbToHex,
-  convertHexToRgb
+  convertHexToRgb,
+  validateHex
 } = require('./formatUtils')
 
 function getNormalizedValue (value, max) {
@@ -27,10 +28,16 @@ function getHexValue (valuesArray) {
   return convertRgbToHex(redvalue, greenvalue, bluevalue)
 }
 
+
 function calculateGradients (params) {
   const max = Math.max(...params.values)
-  const minColorArray = convertHexToRgb(params.minColor || '#ed0e49')
-  const maxColorArray = convertHexToRgb(params.maxColor || '#25960f')
+  const minColorArray = validateHex(params.minColor)
+    ? convertHexToRgb(params.minColor)
+    : convertHexToRgb('#ed0e49')
+  const maxColorArray = validateHex(params.maxColor)
+    ? convertHexToRgb(params.maxColor)
+    : convertHexToRgb('#25960f')
+
   const gradients = params.values.map(v => {
     return {
       value: v,

@@ -1,5 +1,9 @@
 const getHex = hex => hex.length === 1 ? `0${hex}` : hex
 
+function validateHex (hexstr) {
+  return /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(hexstr)
+}
+
 function normalizeHex (hex) {
   const normalizedHex = hex.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, (m, r, g, b) => {
     return `#${r}${r}${g}${g}${b}${b}`.toLowerCase()
@@ -19,6 +23,7 @@ function convertHexToRgb (hex) {
 }
 
 module.exports = {
+  validateHex,
   convertRgbToHex,
   normalizeHex,
   convertHexToRgb
