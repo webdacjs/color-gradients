@@ -9,6 +9,7 @@ test(`'convertRgbToHex' testing`, () => {
   expect(convertRgbToHex(255, 0, 0)).toBe('#ff0000')
   expect(convertRgbToHex(0, 255, 0)).toBe('#00ff00')
   expect(convertRgbToHex(0, 0, 255)).toBe('#0000ff')
+  expect(convertRgbToHex('0', '0', '255')).toBe('#0000ff')
 })
 
 test(`'normalizeHex' testing`, () => {
