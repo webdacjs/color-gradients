@@ -1,0 +1,28 @@
+{
+  "name": "color-gradients",
+  "version": "1.0.0",
+  "description": "Handy module to create hex or rgb color gradients for an array of values defining the color limits.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdacjs/color-gradients.git"
+  },
+  "keywords": [
+    "hex",
+    "rgb",
+    "css",
+    "color"
+  ],
+  "author": "Juan Convers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webdacjs/color-gradients/issues"
+  },
+  "homepage": "https://juanconvers.com",
+  "dependencies": {
+    "console-hue": "^1.0.2"
+  }
+}
