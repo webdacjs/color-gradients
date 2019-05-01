@@ -1,7 +1,6 @@
 const getHex = hex => hex.length === 1 ? `0${hex}` : hex
 
 function normalizeHex (hex) {
-  console.log(hex)
   const normalizedHex = hex.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, (m, r, g, b) => {
     return `#${r}${r}${g}${g}${b}${b}`.toLowerCase()
   }).replace('#', '')
