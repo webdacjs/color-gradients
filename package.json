@@ -1,6 +1,6 @@
 {
   "name": "color-gradients",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Handy module to create hex or rgb color gradients for an array of values defining the color limits.",
   "main": "index.js",
   "scripts": {
