@@ -1,5 +1,9 @@
 const getHex = hex => hex.length === 1 ? `0${hex}` : hex
 
+function isAnObject (val) {
+  return !(val === null || val.constructor.name.toLowerCase() !== 'object')
+}
+
 function validateHex (hexstr) {
   return /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(hexstr)
 }
@@ -24,6 +28,7 @@ function convertHexToRgb (hex) {
 
 module.exports = {
   validateHex,
+  isAnObject,
   convertRgbToHex,
   normalizeHex,
   convertHexToRgb
