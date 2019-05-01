@@ -28,7 +28,6 @@ function getHexValue (valuesArray) {
   return convertRgbToHex(redvalue, greenvalue, bluevalue)
 }
 
-
 function calculateGradients (params) {
   const max = Math.max(...params.values)
   const minColorArray = validateHex(params.minColor)
